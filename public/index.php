@@ -12,6 +12,8 @@
 <div class="p-3 list-group text-center">
     <a href="#" class="list-group-item list-group-item-action active" aria-current="true"><b>LISTES DES EXEMPLES DE VALIDATEUR</b></a>
     <a href="forms/min_long.php" class="list-group-item list-group-item-action">Exemple Validateur de la longueur minimale d'une chaîne de caractère <i>(Harold Trannois)</i></a>
+    <a href="forms/est_une_url.php" class="list-group-item list-group-item-action">Exemple Validateur de Url <i>(Walid Kherroubi)</i></a>
+    <a href="forms/Pass_word.php" class="list-group-item list-group-item-action">Exemple Validateur de Mot De Pass <i>(Mejjout Ziyad)</i></a>
 </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
