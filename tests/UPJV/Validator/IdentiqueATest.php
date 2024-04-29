@@ -7,7 +7,7 @@ require_once __DIR__ . '/../../../vendor/autoload.php';
 use PHPUnit\Framework\TestCase;
 use UPJV\Validator\IdentA;
 
-class IdentATest extends TestCase
+class IdentiqueATest extends TestCase
 {
     public function testConstructor()
     {
