@@ -64,16 +64,13 @@ class EgaleA extends AbstractValidator
     public function verifie($value)
     {
         $this->data = $value;
-        if ((string) $this->egal === (string) 
-        $value) {
+        if ((string) $this->egal === (string) $value) {
             return $this->flag = true;
         }
-        if ((string)$this->egal !== (string)
-        $value) {
+        if ((string)$this->egal !== (string) $value) {
             return $this->flag = false;
         }
-        if (null === (string)
-        $value) {
+        if (null === (string) $value) {
             return $this->flag = null;
         }
     }
