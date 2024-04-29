@@ -70,7 +70,7 @@ class AppartientA extends AbstractValidator
     }
 
     /**
-     * En fonction de l'état du test renvoi rien | une erreur | la condition
+     * En fonction de l'état du test renvoi rien | une erreur | la  condition
      *
      * @return string|void
      */
