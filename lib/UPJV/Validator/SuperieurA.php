@@ -66,8 +66,7 @@ class SuperieurA extends AbstractValidator
         $this->data = $value;
         if ($value < $this->x) {
             return $this->flag = false;
-        }
-        
+        }  
         return $this->flag = true;
     }
 
