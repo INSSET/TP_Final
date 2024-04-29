@@ -29,18 +29,18 @@ class EgaleATest extends TestCase
         $validator = new EgaleA();
 
         // Test avec un nombre inférieur  minimale
-        $this->assertFalse($validator->verifie(2));
+        $this->assertFalse($validator->verifie("2"));
 
         // Test avec nombre minimal
-        $this->assertTrue($validator->verifie(3));
+        $this->assertTrue($validator->verifie("3"));
 
         // Test avec un nombre supérieur minimale
-        $this->assertTrue($validator->verifie(5));
+        $this->assertTrue($validator->verifie("5"));
     }
 
     public function testGetMsgInfo()
     {
-        $validator = new MinLong();
+        $validator = new EgaleA();
 
         // Test lorsque le test n'a pas encore été exécuté
         $this->assertEquals("un nombre égal à 3", $validator->getMsgInfo());
