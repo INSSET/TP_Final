@@ -27,7 +27,7 @@ class EgaleA extends AbstractValidator
     /**
      * Class Min implémente les méthode build & check
      */
-    protected $E;
+    protected $egal;
     protected $data;
     protected $flag;
 
@@ -38,7 +38,7 @@ class EgaleA extends AbstractValidator
     public function __construct()
     {
         parent::__construct();
-        $this->E = 3;
+        $this->egal = 3;
         $this->flag = null;
         $this->data = null;
     }
@@ -50,7 +50,7 @@ class EgaleA extends AbstractValidator
      */
     public function setEgal($E)
     {
-        $this->E = $E;
+        $this->egal = $E;
     }
 
     /**
@@ -66,10 +66,10 @@ class EgaleA extends AbstractValidator
         $this->data = $value;
        
     
-        if ($value == $this->E) {
+        if ($value == $this->egal) {
             return $this->flag = true;
         }
-        if ($value !==$this->E){
+        if ($value !==$this->egal){
             return $this->flag = false;
             }
             if($value == null){
@@ -96,13 +96,13 @@ class EgaleA extends AbstractValidator
     {
         if ($this->flag === false) {
                 
-            return "Le nombre est inférieur ou supérieur à " . $this->E;
+            return "Le nombre est inférieur ou supérieur à " . $this->egal;
         }
         if ($this->flag === true) {
             return "C'est tout bon !";
         }
         if ($this->flag === null) {
-            return "un nombre égal à " . $this->E;
+            return "un nombre égal à " . $this->egal;
         }
     }
 }
