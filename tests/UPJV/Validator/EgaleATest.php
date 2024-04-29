@@ -35,7 +35,7 @@ class EgaleATest extends TestCase
         $this->assertTrue($validator->verifie("3"));
 
         // Test avec un nombre supérieur minimale
-        $this->assertTrue($validator->verifie("5"));
+        $this->assertFalse($validator->verifie("5"));
     }
 
     public function testGetMsgInfo()
