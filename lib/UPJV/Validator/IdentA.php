@@ -8,7 +8,7 @@
  *
  * @package Validator
  *
- * @author Armand
+ * @author Harold <harold.trannois@u-picardie.fr>
  *
  * @license gnu https://www.gnu.org/licenses/gpl-3.0.html
  *
