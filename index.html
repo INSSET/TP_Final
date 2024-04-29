@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul Longueur Maximale</title>
+    <script>
+        // Fonction pour calculer la longueur maximale d'une chaîne de caractères
+        function longueurMaximale(chaine) {
+            // Divise la chaîne en mots
+            var mots = chaine.split(" ");
+            // Initialise la longueur maximale à zéro
+            var longueurMax = 0;
+            // Parcourt chaque mot pour trouver le plus long
+            for (var i = 0; i < mots.length; i++) {
+                if (mots[i].length > longueurMax) {
+                    longueurMax = mots[i].length;
+                }
+            }
+            // Retourne la longueur maximale trouvée
+            return longueurMax;
+        }
+
+        // Fonction pour exécuter le calcul et afficher le résultat
+        function calculerLongueurMaximale() {
+            // Récupère la valeur saisie dans le champ de texte
+            var chaine = document.getElementById("chaine").value;
+            // Calcule la longueur maximale
+            var longueurMax = longueurMaximale(chaine);
+            // Affiche le résultat dans la balise <p> avec l'id "resultat"
+            document.getElementById("resultat").innerHTML = "La longueur maximale est : " + longueurMax;
+        }
+    </script>
+</head>
+<body>
+    <h1>Calcul Longueur Maximale</h1>
+    <label for="chaine">Entrez une phrase :</label>
+    <input type="text" id="chaine">
+    <button onclick="calculerLongueurMaximale()">Calculer</button>
+    <p id="resultat"></p>
+</body>
+</html>
+
