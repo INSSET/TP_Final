@@ -46,11 +46,11 @@ class EgaleATest extends TestCase
         $this->assertEquals("un nombre égal à 3", $validator->getMsgInfo());
 
         // Test lorsque le test échoue
-        $validator->verifie(2);
+        $validator->verifie("2");
         $this->assertEquals("Le nombre est inférieur ou supérieur à 3", $validator->getMsgInfo());
 
         // Test lorsque le test réussit
-        $validator->verifie(3);
+        $validator->verifie("3");
         $this->assertEquals("C'est tout bon !", $validator->getMsgInfo());
     }
 }
