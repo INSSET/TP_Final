@@ -1,0 +1,23 @@
+name: tests_pour_tp_final
+on:
+  pull_request:
+    types:
+      - opened
+    branches:
+      - 'dev'
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  all_tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lance les tests
+        uses: actions/checkout@v2
+
+      - run: curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
+      - run: php phpcs.phar --standard=${{ github.workspace }}/tests/phpcs/Symfony lib
+
+      - run: composer install
+      - run: vendor/bin/phpunit tests/UPJV
