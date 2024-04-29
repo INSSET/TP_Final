@@ -67,7 +67,7 @@ class EgaleA extends AbstractValidator
         if ((string) $this->egal === (string) $value) {
             return $this->flag = true;
         }
-        if ((string)$this->egal !== (string) $value) {
+        if ((string) $this->egal !== (string) $value) {
             return $this->flag = false;
         }
         if (null === (string) $value) {
