@@ -46,11 +46,11 @@ class EgaleA extends AbstractValidator
     /**
      * Permet de fixer un autre nombre 
      *
-     * @param int $min
+     * @param int $egal
      */
-    public function setEgal($E)
+    public function setEgal($egal)
     {
-        $this->egal = $E;
+        $this->egal = $egal;
     }
 
     /**
@@ -67,11 +67,11 @@ class EgaleA extends AbstractValidator
         if ($value == $this->egal) {
             return $this->flag = true;
         }
-        if ($value !==$this->egal){
+        if ($this->egal !== $value) {
             return $this->flag = false;
         }
-        if($value === null){
-         return $this->flag = null;
+        if ($value === null) {
+            return $this->flag = null;
         }
     }
 
@@ -92,7 +92,7 @@ class EgaleA extends AbstractValidator
      */
     public function getMsgInfo()
     {
-        if ($this->flag === false) {   
+        if ($this->flag === false) {  
             return "Le nombre est inférieur ou supérieur à " . $this->egal;
         }
         if ($this->flag === true) {
