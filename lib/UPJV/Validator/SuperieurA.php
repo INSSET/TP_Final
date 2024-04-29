@@ -67,7 +67,7 @@ class SuperieurA extends AbstractValidator
         if ($value < $this->x) {
             return $this->flag = false;
         }
-
+        
         return $this->flag = true;
     }
 
@@ -92,7 +92,7 @@ class SuperieurA extends AbstractValidator
             return "La valeur est inférieur à " . $this->x;
         }
         if ($this->flag === true) {
-            return "La valeur est supérieur à x";
+            return "La valeur est supérieur à " . $this->x;
         }
         if ($this->flag === null) {
             return "Aucune valeur saisie";
