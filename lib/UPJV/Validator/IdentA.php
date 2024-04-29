@@ -50,7 +50,7 @@ class IdentA extends AbstractValidator
      */
     public function setmot($mot)
     {
-        $this->mot= $mot;
+        $this->mot = $mot;
     }
 
     /**
@@ -63,7 +63,7 @@ class IdentA extends AbstractValidator
     public function verifie($value)
     {
         $this->data = $value;
-        if ($value == $this->mot) {
+        if ($value === $this->mot) {
             return $this->flag = true;
         }
 
