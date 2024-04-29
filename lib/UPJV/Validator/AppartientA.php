@@ -52,7 +52,7 @@ class AppartientA extends AbstractValidator
     public function verifie($value)
     {
         $this->data = $value;
-        if (preg_match("/".$this->expression."/i", $value)) {
+        if (preg_match("/" . $this->expression . "/i", $value)) {
             return $this->flag = true;
         }
 
