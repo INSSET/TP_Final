@@ -12,6 +12,7 @@
 <div class="p-3 list-group text-center">
     <a href="#" class="list-group-item list-group-item-action active" aria-current="true"><b>LISTES DES EXEMPLES DE VALIDATEUR</b></a>
     <a href="forms/min_long.php" class="list-group-item list-group-item-action">Exemple Validateur de la longueur minimale d'une chaîne de caractère <i>(Harold Trannois)</i></a>
+    <a href="forms/superieur_a.php" class="list-group-item list-group-item-action">Exemple Validateur pour vérifier qu'une valeur est supérieur à une autre valeur <i>(Melvin Pollier)</i></a>
 
     <a href="forms/avant_date.php" class="list-group-item list-group-item-action">Exemple Validateur d'une date antérieur <i>(Théo RAYMOND)</i></a>
     <a href="forms/Egale_A.php" class="list-group-item list-group-item-action">égale à  <i>(Erwann Deflorenne)</i></a>
