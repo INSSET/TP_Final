@@ -32,14 +32,14 @@ class AppartientATest extends TestCase
         $validator = new AppartientA();
 
         // Test lorsque le test n'a pas encore été exécuté
-        $this->assertEquals("Expression est détecté", $validator->getMsgInfo());
+        $this->assertEquals("L'expression est : detecte", $validator->getMsgInfo());
 
         // Test lorsque le test échoue
         $validator->verifie("hello");
-        $this->assertEquals("Le nombre de caractère est inférieur à 3", $validator->getMsgInfo());
+        $this->assertEquals("L'expression doit être detecte", $validator->getMsgInfo());
 
         // Test lorsque le test réussit
-        $validator->verifie("détecté");
+        $validator->verifie("detecte");
         $this->assertEquals("C'est tout bon !", $validator->getMsgInfo());
     }
 }
