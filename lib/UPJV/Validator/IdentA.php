@@ -8,7 +8,7 @@
  *
  * @package Validator
  *
- * @author Melvin <melvin.pollier@u-picardie.fr>
+ * @author Harold <harold.trannois@u-picardie.fr>
  *
  * @license gnu https://www.gnu.org/licenses/gpl-3.0.html
  *
@@ -18,16 +18,16 @@
 namespace UPJV\Validator;
 
 /**
- * Vérifie que la valeur est supérieur à x
- *  - x fixé par la méthode setValue
- *  - x = 10 par défaut
+ * Vérifie que la chaîne donnée est la même que demandé
+ *  - x fixé par la méthode setmot
+ *  - x = verte par défaut
  */
-class SuperieurA extends AbstractValidator
+class IdentA extends AbstractValidator
 {
     /**
-     * Class SuperieurA implémente les méthode build & check
+     * Class IdentA implémente les méthode build & check
      */
-    protected $x;
+    protected $mot;
     protected $data;
     protected $flag;
 
@@ -38,24 +38,23 @@ class SuperieurA extends AbstractValidator
     public function __construct()
     {
         parent::__construct();
-        $this->x = 10;
+        $this->mot = "verte";
         $this->flag = null;
         $this->data = null;
     }
 
     /**
-     * Permet de fixer un autre nombre
+     * Permet de fixer un autre mot de conf
      *
-     * @param int $x
+     * @param int $mot
      */
-    public function setValue($x)
+    public function setmot($mot)
     {
-        $this->x = $x;
+        $this->mot = $mot;
     }
 
     /**
-     * Test si la valeur est supérieur à x
-     * et stock la donnée pris en charge dans data
+     * Test la chaîne fournit ainsi que le mode demandé
      *
      * @param string $value la valeur à tester
      *
@@ -64,11 +63,11 @@ class SuperieurA extends AbstractValidator
     public function verifie($value)
     {
         $this->data = $value;
-        if ($value < $this->x) {
-            return $this->flag = false;
+        if ($value === $this->mot) {
+            return $this->flag = true;
         }
-        
-        return $this->flag = true;
+
+        return $this->flag = false;
     }
 
     /**
@@ -89,13 +88,13 @@ class SuperieurA extends AbstractValidator
     public function getMsgInfo()
     {
         if ($this->flag === false) {
-            return "La valeur est inférieur à " . $this->x;
+            return "Le mot rentré n'est pas " . $this->mot;
         }
         if ($this->flag === true) {
-            return "La valeur est supérieur à " . $this->x;
+            return "La couleur des pommes";
         }
         if ($this->flag === null) {
-            return "Aucune valeur saisie";
+            return "mot demandé  : " . $this->mot;
         }
     }
 }

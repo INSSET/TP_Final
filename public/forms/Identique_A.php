@@ -1,7 +1,6 @@
 <?php
 require_once __DIR__."/../../vendor/autoload.php";
-
-$validator = new UPJV\Validator\SuperieurA();
+$validator = new UPJV\Validator\IdentA();
 
 if (isset($_POST['bt'])) {
     $validator->verifie($_POST['data']);
